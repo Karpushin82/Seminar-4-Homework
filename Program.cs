@@ -2,7 +2,7 @@
 // и возводит число A в натуральную степень B.
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
-/*Console.WriteLine($"\nЗадача 25 Возведение числа A в натуральную степень B");
+Console.WriteLine($"\nЗадача 25 Возведение числа A в натуральную степень B");
 
 int Exponentiation(int numberA, int numberB)
 {
@@ -10,8 +10,8 @@ int Exponentiation(int numberA, int numberB)
     for (int i = 1; i <= numberB; i++)
     {
         result = result * numberA;
+        
     }
-    // int result = Math.Pow(numberA, numberB);
     return result;
 }
 
@@ -22,7 +22,7 @@ int numberB = Convert.ToInt32(Console.ReadLine());
 
 int exponentiation = Exponentiation(numberA, numberB);
 Console.WriteLine("Результат: " + exponentiation);
-*/
+
 
 //Задача 27 Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 // 452 -> 11
@@ -55,7 +55,7 @@ Console.WriteLine("Сумма цифр в числе: " + sumNumber);
 // и выводит их на экран.
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
-
+/*
 Console.WriteLine($"\nЗадача 29 ряд чисел преобразует в массив ");
 Console.Write("Введите ряд чисел, разделённых запятой:");
 string? seriesOfNumbers = Console.ReadLine();
@@ -148,4 +148,4 @@ int[] arrayOfNumbers = ArrayOfNumbers(seriesNew);
 
 PrintArry(arrayOfNumbers);
 
-
+*/
