@@ -1,8 +1,8 @@
 ﻿// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) 
 // и возводит число A в натуральную степень B.
 // 3, 5 -> 243 (3⁵)
-// 2, 4 -> 16
-Console.WriteLine($"\nЗадача 25 Возведение числа A в натуральную степень B");
+// 2, 4 -> 16      
+/*Console.WriteLine($"\nЗадача 25 Возведение числа A в натуральную степень B");
 
 int Exponentiation(int numberA, int numberB)
 {
@@ -10,7 +10,7 @@ int Exponentiation(int numberA, int numberB)
     for (int i = 1; i <= numberB; i++)
     {
         result = result * numberA;
-        
+
     }
     return result;
 }
@@ -23,7 +23,7 @@ int numberB = Convert.ToInt32(Console.ReadLine());
 int exponentiation = Exponentiation(numberA, numberB);
 Console.WriteLine("Результат: " + exponentiation);
 
-
+*/
 //Задача 27 Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 // 452 -> 11
 // 82 -> 10
@@ -51,11 +51,11 @@ int sumNumber = SumNumber(numberN);
 Console.WriteLine("Сумма цифр в числе: " + sumNumber);
 */
 
-// Напишите программу, которая задаёт массив из произвольного элементов 
+// Напишите программу, которая задаёт массив из 8 элементов 
 // и выводит их на экран.
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
-/*
+
 Console.WriteLine($"\nЗадача 29 ряд чисел преобразует в массив ");
 Console.Write("Введите ряд чисел, разделённых запятой:");
 string? seriesOfNumbers = Console.ReadLine();
@@ -78,74 +78,63 @@ string RemovingSpaces(String series)
     return seriesNew;
 }
 
-//  Функция  проверки на правильность ввода 
-void СheckNumber2(int series)
-{
+//  функция  проверки на правильность ввода 
+void СheckNumber2 (int  series){
 
-    if (series == '0' || series == '1' || series == '2'
-    || series == '3' || series == '4' || series == '5' || series == '6'
-    || series == '7' || series == '8' || series == '9' || series == ','
-    || series == '-')
-    {
-    }
-    else
-    {
-        Console.WriteLine($"Ошибка ввода  символа. Вводи цифры.");
+      if (series == '0'||series == '1'||series == '2'
+      ||series == '3'||series == '4'||series == '5'||series == '6'
+      ||series == '7'||series == '8'||series == '9'||series == ','
+      ||series == '-')
+      {
+      }
+        else {
+          Console.WriteLine($"Ошибка ввода  символа. Вводи цифры.");
 
-    }
+      }
 }
 
-// Функция  создания и заполнения массива из строки
-int[] ArrayOfNumbers(string seriesNew)
-{
+// функция  создания и заполнения массива из строки
+int[] ArrayOfNumbers(string seriesNew){ 
 
-    int[] arrayOfNumbers = new int[1];  // Инициализация массива из 1 элемента
+  int[] arrayOfNumbers = new int[1];    // инициализация массива из 1 элемента
 
-    int j = 0;
+  int j =0;
 
-    for (int i = 0; i < seriesNew.Length; i++)
-    {
-        string seriesNew1 = "";
+  for (int i = 0; i < seriesNew.Length; i++){
+    string seriesNew1 = "";
 
-        while (seriesNew[i] != ',' && i < seriesNew.Length)
-        {
-            seriesNew1 += seriesNew[i];
-            СheckNumber2(seriesNew[i]);
-            i++;
-        }
-        arrayOfNumbers[j] = Convert.ToInt32(seriesNew1);  // Заполняет массив значениями из строки
-        if (i < seriesNew.Length - 1)
-        {
-            arrayOfNumbers = arrayOfNumbers.Concat(new int[] { 0 }).ToArray();  // добавляет новый нулевой элемент в конец массива
-        }
-        j++;
+    while (seriesNew[i] != ',' && i < seriesNew.Length){
+      seriesNew1 += seriesNew[i];
+      СheckNumber2(seriesNew[i]);
+      i++;
     }
-    return arrayOfNumbers;
+    arrayOfNumbers[j] = Convert.ToInt32(seriesNew1);    // заполняет массив значениями из строки
+    if (i < seriesNew.Length-1){
+      arrayOfNumbers = arrayOfNumbers.Concat(new int[] {0}).ToArray();    // добавляет новый нулевой элемент в конец массива
+    }
+    j++;
+  }
+  return arrayOfNumbers;
 }
 
-// Функция  вывода массива на печать 
-void PrintArry(int[] coll)
-{
-    int count = coll.Length;
-    int index = 0;
-    Console.Write("[");
-    while (index < count)
-    {
-        Console.Write(coll[index]);
-        index++;
-        if (index < count)
-        {
-            Console.Write(", ");
-        }
+// функция  вывода массива на печать 
+void PrintArry(int[] coll){
+  int count = coll.Length;
+  int index = 0;
+  Console.Write("[");
+  while(index < count){
+    Console.Write(coll[index]);
+    index++;
+    if (index < count){
+      Console.Write(", ");
     }
-    Console.Write("]");
-}
+  }
+  Console.Write("]");
+} 
 
 
 string seriesNew = RemovingSpaces(seriesOfNumbers);
 
-int[] arrayOfNumbers = ArrayOfNumbers(seriesNew);
+int[] arrayOfNumbers =  ArrayOfNumbers(seriesNew);
 
 PrintArry(arrayOfNumbers);
-
-*/
